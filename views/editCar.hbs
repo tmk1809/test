@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/public/stylesheets/style.css">
+    <title>All Car</title>
+
+</head>
+
+<body style="background-color: blanchedalmond;">
+    <div class="container col-md-6 mt-3 mb-3 card bg-light">
+    <form action="/car/edit/{{ car._id }}" method="post">
+        <h1 class="text text-danger text-center text-uppercase mt-3">Edit Car</h1>
+        <div class="form-group mt-3">
+            <label class="h5 text text-success" for="">Car name</label>
+            <input class="form-control" type="text" name="name" value={{ car.name }} required>
+        </div>
+
+        <div class="form-group mt-3">
+            <label class="h5 text text-success" for="">Brand</label>
+            <input class="form-control" type="text" name="brand" value={{ car.brand }} required>
+        </div>
+        
+        <div class="form-group mt-3">
+            <label class="h5 text text-success" for="">Category</label>
+            <input class="form-control" type="text" name="category" value={{ car.category }} required>
+        </div>
+
+        <div class="form-group mt-3">
+            <label class="h5 text text-success" for="">Price</label>
+            <input class="form-control" type="text" name="price" value={{ car.price }} required>
+        </div>
+
+        <div class="form-group mt-3">
+            <label class="h5 text text-success" for="">Quantity</label>
+            <input class="form-control" type="number" min="0" name="quantity" value={{ car.quantity }} required>
+        </div>
+        
+
+        <div class="form-group mt-3">
+            <label class="h5 text text-success" for="">Color</label>
+            <input class="form-control" type="text" name="color" value={{ car.color }} required>
+        </div>
+
+        <div class="form-group mt-3">
+            <label class="h5 text text-success" for="">Date</label>
+            <input class="form-control" type="date" name="date" value={{ car.date }} required>
+        </div>
+        
+        <div class="form-group text-center mt-3 mb-3">
+            <input class="btn btn-success" type="submit" value="Edit" style="cursor: pointer;">
+        </div>
+    </form>
+</div>
+</body>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/public/stylesheets/style.css">
+    <title>New Car</title>
+</head>
+<body style="background-color: blanchedalmond;">
+    <div class="container">
+        <h1>New Car</h1>
+        <h2><a href="/">Return to the homepage</a></h2>
+        <style>
+            a{
+                color: #8a5511;
+            }
+        a:hover {
+            color: #dd9c48;
+            text-decoration: none;
+        }
+</style>
+        <form action="/car/add/" method="post">
+            <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" placeholder="Enter name" name="name" required>
+            <br>
+            </div>
+
+            <div class="form-group">
+            <label for="name">Brand:</label>
+            <input type="text" class="form-control" placeholder="Enter brand" name="brand" required>
+            <br>
+            </div>
+
+            <div class="form-group">
+            <label for="name">Category:</label>
+            <input type="text" class="form-control" placeholder="Choose category" name="category" required>
+            <br>
+            </div>
+
+            <div class="form-group">
+            <label for="name">Price:</label>
+            <input type="text" class="form-control" placeholder="Enter price" name="price" required>
+            <br>
+            </div>
+
+            <div class="form-group">
+            <label for="price">Quantity:</label>
+            <input type="number" min="1" class="form-control" placeholder="Enter quantity" name="quantity" required>
+            <br>
+            </div>
+
+            <div class="form-group">
+            <label for="name">Color:</label>
+            <input type="text" class="form-control" placeholder="Enter color" name="color" required>
+            <br>
+            </div>
+
+            <div class="form-group">
+            <label for="name">Date:</label>
+            <input type="date" class="form-control" name="date" required>
+            <br>
+            </div>
+
+        <button type="submit" class="btn btn-default">Create</button>
+    </div>
+    </form>
+</body>
+</html>
