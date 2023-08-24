@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/public/stylesheets/style.css">
+    <title>All Product</title>
+
+</head>
+
+<body style="background-color: blanchedalmond;">
+    <h1>All product</h1>
+    <h3><a href="insert" class="add ">Add New Product</a></h3><br>
+    <style>
+        .add {
+            color: #8a5511;
+        }
+
+        th {
+            font-size: 20px;
+        }
+
+        a:hover {
+            color: #dd9c48;
+            text-decoration: none;
+        }
+
+        .viewform {
+            width: 150px;
+        }
+    </style>
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID Product</th>
+                <th>Name</th>
+                <th>Price (USD)</th>
+                <th>Picture</th>
+                <th style="text-align: center;">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each products}}
+            <tr>
+                <td>{{@index}}{{id}}</td>
+                <td>{{name}}</td>
+                <td>{{price}}</td>
+                <td><img src="/images/{{picture}}" width="300" height="230" /></td>
+                <td><a href="edit/{{ _id }}" class="btn btn-success">Edit</a></td>
+                <td><a href="delete/{{ _id }}" class="btn btn-danger">Delete</a></td>
+            </tr>
+            {{/each}}
+        </tbody>
+
+            {{!-- <div class="viewform">
+        <select class="form-control" onchange="window.location.href=this.value">
+            <option value="#">
+                Sort options
+            </option>
+            <option value="/product/sort/price/asc">
+                Sort by Price ascending
+            </option>
+            <option value="/product/sort/price/desc">
+                Sort by Price descending
+            </option>
+            <option value="/product/sort/name">
+                Sort by name
+            </option>
+        </select>
+        <form action="/product/search" method="post">
+            <input class="form-control" type="search" name="keyword" placeholder="Search by name" required>
+        </form>
+    </div> --}}
+</body>
+
+</html>
